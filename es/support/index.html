@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ayuda · Dartpop</title>
+<meta name="description" content="Ayuda de Dartpop: anotar los puntos, los juegos, las partidas gratis, restaurar la compra, cambiar de dispositivo, sonidos y vibraciones, contacto.">
+<meta property="og:title" content="Ayuda · Dartpop">
+<meta property="og:image" content="../../assets/icon.png">
+<meta name="theme-color" content="#F3EEE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+<link rel="alternate" hreflang="fr" href="https://hafidnes.github.io/dartpop-site/support/">
+<link rel="alternate" hreflang="en" href="https://hafidnes.github.io/dartpop-site/en/support/">
+<link rel="alternate" hreflang="de" href="https://hafidnes.github.io/dartpop-site/de/support/">
+<link rel="alternate" hreflang="es" href="https://hafidnes.github.io/dartpop-site/es/support/">
+<link rel="alternate" hreflang="it" href="https://hafidnes.github.io/dartpop-site/it/support/">
+<link rel="alternate" hreflang="pt" href="https://hafidnes.github.io/dartpop-site/pt/support/">
+<link rel="alternate" hreflang="x-default" href="https://hafidnes.github.io/dartpop-site/en/support/">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="apple-touch-icon" href="../../assets/touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3EEE6;--bg2:#EBE4D9;--card:#FFFDF9;--ink:#17130F;--muted:#6B635B;--line:#DDD3C5;
+  --red:#E30E1C;--red-ink:#B30A16;--green:#1E8A4C;--cream:#F4ECDC;--board:#17130F;
+  --shadow:0 30px 60px -30px rgba(40,20,10,.35);
+  --display:"Archivo",system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141210;--bg2:#1D1A17;--card:#221E1B;--ink:#F3EEE6;--muted:#A99F94;--line:#3A342E;--red:#FF3B47;--red-ink:#FF6B73;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.8)}}
+:root[data-theme="dark"]{
+  --bg:#141210;--bg2:#1D1A17;--card:#221E1B;--ink:#F3EEE6;--muted:#A99F94;--line:#3A342E;--red:#FF3B47;--red-ink:#FF6B73;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.display{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 68;letter-spacing:-.02em;line-height:.88;text-transform:uppercase}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red-ink);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{filter:brightness(1.07)}
+.wordmark{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 80;font-size:26px;letter-spacing:-.03em;text-decoration:none}
+.wordmark b{color:var(--red);font-weight:900}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.site.scrolled{border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+nav{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--ink)}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.right{display:flex;align-items:center;gap:10px}
+.right .btn{padding:10px 16px;border-radius:12px;font-size:14px}
+
+/* Page opening */
+.opening{position:relative;padding:48px 0 8px;overflow:hidden}
+.opening-arc{position:absolute;right:-180px;top:-200px;width:620px;height:620px;border-radius:50%;border:90px solid color-mix(in srgb,var(--red) 14%,transparent);pointer-events:none}
+.opening .wrap{position:relative}
+.opening h1{font-size:clamp(56px,8.4vw,128px);margin:18px 0 18px}
+.opening h1 span{display:block}
+.opening h1 .r{color:var(--red)}
+.lede{font-size:21px;color:var(--muted);max-width:46ch;margin:0 0 14px}
+.small{font-size:14px;color:var(--muted);margin:0}
+
+/* Contents and cards */
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;align-items:start;padding:44px 0 100px}
+.toc{display:block;position:sticky;top:88px}
+.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.toc a{display:block;padding:8px 12px;border-radius:12px;color:var(--muted);text-decoration:none;font-size:15px;line-height:1.35}
+.toc a:hover{background:var(--card);color:var(--ink)}
+.cards{display:grid;gap:16px;min-width:0;max-width:820px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;min-width:0}
+.card h2{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 75;font-size:clamp(30px,4vw,40px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin:0 0 16px;overflow-wrap:break-word;hyphens:auto}
+.card p{margin:0 0 14px;color:var(--muted);overflow-wrap:break-word}
+.card>:last-child{margin-bottom:0}
+.card b{color:var(--ink)}
+.card a{color:var(--red-ink);font-weight:700}
+.path{color:var(--ink);font-weight:700}
+.card ul{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:12px}
+.card ul li{position:relative;padding-left:22px;color:var(--muted);overflow-wrap:break-word}
+.card ul li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.steps{list-style:none;counter-reset:step;padding:0;margin:0 0 16px;display:grid;gap:12px}
+.steps li{counter-increment:step;display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+.steps li>span{min-width:0;overflow-wrap:break-word}
+.steps li::before{content:counter(step);flex:none;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.card.contact{background:var(--red);color:#fff;border-color:var(--red);position:relative;overflow:hidden}
+.card.contact::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:44px solid rgba(255,255,255,.12);pointer-events:none}
+.card.contact p{color:#ffe6e8}
+.card.contact .btn{position:relative;z-index:1;background:#fff;color:#B30A16;max-width:100%;overflow-wrap:anywhere;font-weight:700}
+
+footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{gap:18px;display:flex;flex-wrap:wrap}
+
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:28px}
+  .toc{position:static;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}
+  .toc p{padding-left:12px}
+  .cards{max-width:none}
+  header.site nav{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .opening{padding-top:32px}
+  .lede{font-size:19px}
+  .layout{padding-bottom:70px}
+  .card{padding:22px 18px;border-radius:22px}
+  .right .btn{display:none}
+  .card.contact .btn{font-size:15px;padding:14px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+.langs{position:relative;border:0;padding:0}.langs summary{list-style:none;cursor:pointer;font-weight:800;font-size:13px;padding:0;display:flex;align-items:center;justify-content:center;width:40px}.langs summary::-webkit-details-marker{display:none}.langs summary::after{content:none}.langs div{position:absolute;right:0;top:46px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;display:grid;min-width:150px;box-shadow:var(--shadow);z-index:30}.langs a{padding:8px 12px;border-radius:9px;text-decoration:none;font-size:15px}.langs a:hover,.langs a[aria-current]{background:var(--bg2)}
+</style>
+</head>
+<body>
+<header class="site" id="top">
+  <div class="wrap bar">
+    <a class="wordmark" href="../" aria-label="Dartpop, inicio">dart<b>pop</b></a>
+    <nav aria-label="Sections">
+      <a href="../">Inicio</a><a href="../privacy/">Privacidad</a><a href="#contacto">Contacto</a>
+    </nav>
+    <div class="right">
+      <details class="langs"><summary class="icon-btn" aria-label="Language">ES</summary><div><a href="../../support/" hreflang="fr" lang="fr">Français</a><a href="../../en/support/" hreflang="en" lang="en">English</a><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a><a href="./" hreflang="es" lang="es" aria-current="page">Español</a><a href="../../it/support/" hreflang="it" lang="it">Italiano</a><a href="../../pt/support/" hreflang="pt" lang="pt">Português</a></div></details>
+      <button class="icon-btn" id="theme" aria-label="Cambiar entre tema claro y oscuro">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-red" href="https://apps.apple.com/app/id6825865334">Descargar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="opening">
+  <div class="opening-arc" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker">Ayuda</div>
+    <h1 class="display"><span>¿Necesitas</span><span class="r">ayuda?</span></h1>
+    <p class="lede">Anotar los puntos, desbloquear Dartpop, llevar tus partidas a un dispositivo nuevo: aquí están las respuestas. Si no, escríbenos.</p>
+    <p class="small">Actualizado: 24 de noviembre de 2026</p>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Contenido">
+    <p>Contenido</p>
+    <ol><li><a href="#puntos">Anotar los puntos</a></li><li><a href="#juegos">Los juegos</a></li><li><a href="#gratis">Las partidas gratis</a></li><li><a href="#restaurar">Restaurar la compra</a></li><li><a href="#dispositivo">Cambiar de dispositivo</a></li><li><a href="#sonidos">Sonidos y vibraciones</a></li><li><a href="#datos">Compartir datos, opcional</a></li><li><a href="#problema">Informar de un problema</a></li><li><a href="#contacto">Contacto</a></li></ol>
+  </nav>
+  <div class="cards">
+      <section class="card" id="puntos" aria-labelledby="puntos-title">
+        <h2 id="puntos-title">Anotar los puntos</h2>
+        <p>Dartpop se usa junto a una diana de verdad: introduces cada dardo a mano y la app hace las cuentas. Durante la partida puedes pasar en cualquier momento de la <b>Diana táctil</b> al <b>Teclado rápido</b>.</p><ul><li><b>Diana táctil.</b> Toca la zona alcanzada o desliza el dedo: una lupa muestra la zona antes de soltar. Fuera de la diana cuenta como fallo.</li><li><b>Teclado rápido.</b> Toca un número. Para un doble o un triple, elige antes <b>Doble</b> o <b>Triple</b>; en ’01 también puedes deslizar la tecla hacia arriba (doble) o hacia abajo (triple). Las teclas <b>25</b> y <b>Diana 50</b> completan el teclado.</li><li><b>Fallo.</b> Un dardo fuera de la diana se anota con el botón <b>Fallo</b>.</li><li><b>Confirmar.</b> Una tirada tiene hasta tres dardos; confírmala para pasar al siguiente jugador. En ’01, con <b>Cambio automático de jugador</b> (<span class="path">Ajustes › A tu ritmo</span>), la tirada se confirma tras una breve pausa después del tercer dardo.</li><li><b>Corregir.</b> El botón de deshacer (flecha hacia atrás) borra la última entrada. En ’01 también puede volver al turno anterior, y si tocas un dardo ya anotado puedes repetir su entrada y las siguientes.</li></ul><p>Las reglas de cada juego se explican en <span class="path">Ajustes › A tu ritmo › Entender las reglas</span>.</p>
+      </section>
+      <section class="card" id="juegos" aria-labelledby="juegos-title">
+        <h2 id="juegos-title">Los juegos</h2>
+        <p>En la pestaña <b>Jugar</b>, elige un juego y luego los jugadores: de 2 a 8 (al menos 3 en Killer).</p><ul><li><b>301 · 501.</b> Puntuación inicial de 301, 501, 701, 901 o 1001. Inicio libre o con doble, cierre libre o con doble. Individual, por parejas (2 contra 2) o en equipos (4 contra 4) con puntuación compartida. A una manga, o gana el primero en lograr 2, 3 o 5 victorias.</li><li><b>Cricket.</b> Cierra del 15 al 20 y el bull.</li><li><b>La vuelta al mundo.</b> Acierta los números del 1 al 20 en orden y, según la opción elegida, después el centro.</li><li><b>Killer.</b> Cada jugador tiene su número y sus vidas; gana el último superviviente.</li><li><b>Shanghai.</b> Cada ronda apunta a su número, en 7 o 20 rondas. Un simple, un doble y un triple en la misma tirada dan la victoria inmediata.</li><li><b>Halve-It.</b> Acierta el objetivo de cada ronda; si fallas los tres dardos, tu total se divide entre dos.</li></ul><p>La pestaña <b>Entrenar</b> ofrece ejercicios en solitario.</p>
+      </section>
+      <section class="card" id="gratis" aria-labelledby="gratis-title">
+        <h2 id="gratis-title">Las partidas gratis</h2>
+        <p><b>Tres partidas completas son gratis.</b> Una partida incluye todas sus mangas y solo cuentan las partidas terminadas. El número de partidas gratuitas restantes aparece en <span class="path">Ajustes › Compras</span>.</p><p>Después, una compra única y permanente permite iniciar nuevas partidas sin límite. Sin suscripción. El precio aparece en el App Store, en tu moneda, antes de comprar.</p><p>Sin comprar, tus resultados siguen disponibles, y el entrenamiento en solitario, el historial, las estadísticas, las copias, compartir y la segunda pantalla siguen siendo gratis.</p>
+      </section>
+      <section class="card" id="restaurar" aria-labelledby="restaurar-title">
+        <h2 id="restaurar-title">Restaurar la compra</h2>
+        <ol class="steps"><li><span>Usa la misma cuenta de Apple con la que compraste.</span></li><li><span>Abre <span class="path">Ajustes › Compras</span>.</span></li><li><span>Toca <b>Restaurar compras</b>.</span></li></ol><p>La app muestra «Compras restauradas» cuando recuperas el acceso, o «No hay compras que restaurar» si no encuentra ninguna. Puede hacer falta conexión a internet: si lees «Servicio no disponible. Inténtalo más tarde.», comprueba tu conexión y vuelve a intentarlo.</p>
+      </section>
+      <section class="card" id="dispositivo" aria-labelledby="dispositivo-title">
+        <h2 id="dispositivo-title">Cambiar de dispositivo</h2>
+        <ol class="steps"><li><span>En el dispositivo antiguo, abre <span class="path">Ajustes › Copia y restauración</span> y toca <b>Exportar copia</b>. Guarda el archivo en Archivos o en iCloud Drive, o compártelo con tu nuevo dispositivo.</span></li><li><span>En el dispositivo nuevo, abre la misma pantalla, toca <b>Importar copia</b> y elige el archivo.</span></li><li><span>Restaura la compra por separado con la misma cuenta de Apple: <span class="path">Ajustes › Compras › Restaurar compras</span>.</span></li></ol><p>La copia contiene tus amigos guardados, la partida actual y los resultados. La importación sustituye la partida activa y los ajustes; se conservan los resultados existentes. Antes se crea una copia de recuperación: <b>Recuperar la versión anterior a la importación</b> te permite volver atrás.</p><p>El contador de partidas gratuitas no se reinicia al importar una copia.</p>
+      </section>
+      <section class="card" id="sonidos" aria-labelledby="sonidos-title">
+        <h2 id="sonidos-title">Sonidos y vibraciones</h2>
+        <p>Los dos se ajustan en <span class="path">Ajustes › A tu ritmo</span> y están activados por defecto.</p><ul><li><b>Sonidos.</b> Sonidos breves al validar una tirada, al ganar y tras la compra. No suenan en modo silencio y no cortan tu música.</li><li><b>Respuesta háptica.</b> Vibraciones al registrar dardos y al terminar el turno.</li></ul><p>¿No oyes nada? Comprueba el modo silencio del dispositivo y luego el interruptor <b>Sonidos</b>.</p>
+      </section>
+      <section class="card" id="datos" aria-labelledby="datos-title">
+        <h2 id="datos-title">Compartir datos, opcional</h2>
+        <p>Dartpop te pregunta una sola vez: «¿Ayudar a mejorar Dartpop?». Compartir es opcional y sigue desactivado mientras no respondas «Compartir».</p><p>Si aceptas, la app envía estadísticas de uso y diagnósticos de fallos, con un identificador aleatorio. Nunca nombres, puntuaciones ni tus copias de seguridad.</p><p>Puedes cambiar de opinión en cualquier momento con el interruptor <span class="path">Ajustes › Acerca de › Ayudar a mejorar Dartpop</span>. Todos los detalles en <a href="../privacy/">Privacidad</a>.</p>
+      </section>
+      <section class="card" id="problema" aria-labelledby="problema-title">
+        <h2 id="problema-title">Informar de un problema</h2>
+        <p>Escríbenos indicando:</p><ul><li>el modelo de tu dispositivo y la versión de iOS o iPadOS;</li><li>tu versión de Dartpop, visible en <span class="path">Ajustes › Acerca de › Versión</span>;</li><li>el juego afectado y los pasos que llevan al problema.</li></ul><p>No envíes nunca contraseñas ni datos bancarios.</p>
+      </section>
+      <section class="card contact" id="contacto" aria-labelledby="contacto-title">
+        <h2 id="contacto-title">Contacto</h2>
+        <p>¿Una pregunta o un problema? Escríbenos.</p>
+        <a class="btn" href="mailto:abdelhafid.younes@gmail.com">abdelhafid.younes@gmail.com</a>
+      </section>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Dartpop · Abdelhafid Younes</span>
+    <nav aria-label="Enlaces legales">
+      <a href="../">Inicio</a>
+      <a href="../privacy/">Privacidad</a>
+      <a href="./" aria-current="page">Ayuda</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const store = { get(k){ try { return localStorage.getItem(k) } catch { return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch {} } };
+  const saved = store.get("dartpop-theme"); if (saved) root.dataset.theme = saved;
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark"; store.set("dartpop-theme", root.dataset.theme);
+  });
+  const header = document.querySelector("header.site");
+  addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 8), { passive: true });
+})();
+</script>
+</body>
+</html>

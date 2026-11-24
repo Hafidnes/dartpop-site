@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Privacidade · Dartpop</title>
+<meta name="description" content="Privacidade · Dartpop · Atualizado: 16 de novembro de 2026">
+<meta name="theme-color" content="#F3EEE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="apple-touch-icon" href="../../assets/touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3EEE6;--bg2:#EBE4D9;--card:#FFFDF9;--ink:#17130F;--muted:#6B635B;--line:#DDD3C5;
+  --red:#E30E1C;--red-ink:#B30A16;--green:#1E8A4C;--cream:#F4ECDC;--board:#17130F;
+  --shadow:0 30px 60px -30px rgba(40,20,10,.35);
+  --display:"Archivo",system-ui,sans-serif;--text:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141210;--bg2:#1D1A17;--card:#221E1B;--ink:#F3EEE6;--muted:#A99F94;--line:#3A342E;--red:#FF3B47;--red-ink:#FF6B73;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.8)}}
+:root[data-theme="dark"]{
+  --bg:#141210;--bg2:#1D1A17;--card:#221E1B;--ink:#F3EEE6;--muted:#A99F94;--line:#3A342E;--red:#FF3B47;--red-ink:#FF6B73;
+  --shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.display{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 68;letter-spacing:-.02em;line-height:.88;text-transform:uppercase}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red-ink);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{filter:brightness(1.07)}
+.wordmark{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 80;font-size:26px;letter-spacing:-.03em;text-decoration:none}
+.wordmark b{color:var(--red);font-weight:900}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.site.scrolled{border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+nav{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--ink)}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.right{display:flex;align-items:center;gap:10px}
+.right .btn{padding:10px 16px;border-radius:12px;font-size:14px}
+
+/* Page opening */
+.opening{position:relative;padding:48px 0 8px;overflow:hidden}
+.opening-arc{position:absolute;right:-180px;top:-200px;width:620px;height:620px;border-radius:50%;border:90px solid color-mix(in srgb,var(--red) 14%,transparent);pointer-events:none}
+.opening .wrap{position:relative}
+.opening h1{font-size:clamp(56px,8.4vw,128px);margin:18px 0 18px}
+.opening h1 span{display:block}
+.opening h1 .r{color:var(--red)}
+.lede{font-size:21px;color:var(--muted);max-width:46ch;margin:0 0 14px}
+.small{font-size:14px;color:var(--muted);margin:0}
+
+/* Contents and cards */
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;align-items:start;padding:44px 0 100px}
+.toc{display:block;position:sticky;top:88px}
+.toc p{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.toc a{display:block;padding:8px 12px;border-radius:12px;color:var(--muted);text-decoration:none;font-size:15px;line-height:1.35}
+.toc a:hover{background:var(--card);color:var(--ink)}
+.cards{display:grid;gap:16px;min-width:0;max-width:820px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;min-width:0}
+.card h2{font-family:var(--display);font-weight:900;font-variation-settings:"wdth" 75;font-size:clamp(30px,4vw,40px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin:0 0 16px;overflow-wrap:break-word;hyphens:auto}
+.card p{margin:0 0 14px;color:var(--muted);overflow-wrap:break-word}
+.card>:last-child{margin-bottom:0}
+.card b{color:var(--ink)}
+.card a{color:var(--red-ink);font-weight:700}
+.path{color:var(--ink);font-weight:700}
+.card ul{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:12px}
+.card ul li{position:relative;padding-left:22px;color:var(--muted);overflow-wrap:break-word}
+.card ul li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.steps{list-style:none;counter-reset:step;padding:0;margin:0 0 16px;display:grid;gap:12px}
+.steps li{counter-increment:step;display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+.steps li>span{min-width:0;overflow-wrap:break-word}
+.steps li::before{content:counter(step);flex:none;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;font-size:14px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.card.contact{background:var(--red);color:#fff;border-color:var(--red);position:relative;overflow:hidden}
+.card.contact::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:44px solid rgba(255,255,255,.12);pointer-events:none}
+.card.contact p{color:#ffe6e8}
+.card.contact .btn{position:relative;z-index:1;background:#fff;color:#B30A16;max-width:100%;overflow-wrap:anywhere;font-weight:700}
+
+footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{gap:18px;display:flex;flex-wrap:wrap}
+
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:28px}
+  .toc{position:static;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}
+  .toc p{padding-left:12px}
+  .cards{max-width:none}
+  header.site nav{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .opening{padding-top:32px}
+  .lede{font-size:19px}
+  .layout{padding-bottom:70px}
+  .card{padding:22px 18px;border-radius:22px}
+  .right .btn{display:none}
+  .card.contact .btn{font-size:15px;padding:14px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+.langs{position:relative;border:0;padding:0}.langs summary{list-style:none;cursor:pointer;font-weight:800;font-size:13px;padding:0;display:flex;align-items:center;justify-content:center;width:40px}.langs summary::-webkit-details-marker{display:none}.langs summary::after{content:none}.langs div{position:absolute;right:0;top:46px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;display:grid;min-width:150px;box-shadow:var(--shadow);z-index:30}.langs a{padding:8px 12px;border-radius:9px;text-decoration:none;font-size:15px}.langs a:hover,.langs a[aria-current]{background:var(--bg2)}
+
+/* Privacy: one band per language */
+.lang{position:relative;overflow:hidden;scroll-margin-top:64px}
+.lang.tint{background:var(--bg2);border-top:1px solid var(--line)}
+.lang>.wrap{position:relative}
+.lang .opening{padding:56px 0 0;overflow:visible}
+.lang .opening h1{font-size:clamp(40px,8.4vw,120px);margin:18px 0 14px;overflow-wrap:break-word}
+.lang .layout{padding:36px 0 90px}
+.lang .card{scroll-margin-top:84px}
+a.icon-btn{text-decoration:none;font-weight:800;font-size:13px}
+@media (max-width:640px){.lang .opening{padding-top:36px}.lang .layout{padding-bottom:64px}}
+</style>
+</head>
+<body>
+<header class="site" id="top">
+  <div class="wrap bar">
+    <a class="wordmark" href="../" aria-label="Dartpop, início">dart<b>pop</b></a>
+    <nav aria-label="Sections">
+      <a href="../">Início</a><a href="../support/">Apoio</a>
+    </nav>
+    <div class="right">
+      <details class="langs"><summary class="icon-btn" aria-label="Language">PT</summary><div><a href="../../privacy/" hreflang="fr" lang="fr">Français</a><a href="../../privacy/#en" hreflang="en" lang="en">English</a><a href="../../de/privacy/" hreflang="de" lang="de">Deutsch</a><a href="../../es/privacy/" hreflang="es" lang="es">Español</a><a href="../../it/privacy/" hreflang="it" lang="it">Italiano</a><a href="./" hreflang="pt" lang="pt" aria-current="page">Português</a></div></details>
+      <button class="icon-btn" id="theme" aria-label="Alternar entre tema claro e escuro">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-red" href="https://apps.apple.com/app/id6825865334">Descarregar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="lang" id="pt">
+  <div class="opening-arc" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="opening">
+      <div class="kicker">Dartpop</div>
+      <h1 class="display">Privacidade</h1>
+      <p class="small">Atualizado: 16 de novembro de 2026</p>
+    </div>
+    <div class="layout">
+      <nav class="toc" aria-label="Índice">
+        <p>Índice</p>
+        <ol><li><a href="#pt-partidas">As partidas ficam no dispositivo</a></li><li><a href="#pt-compra-unica">Compra única</a></li><li><a href="#pt-analise-e-diagnostico">Análise e diagnóstico</a></li><li><a href="#pt-prestadores-e-conservacao">Prestadores e conservação</a></li><li><a href="#pt-escolhas-e-direitos">Escolhas e direitos</a></li><li><a href="#pt-editor-e-contacto">Editor e contacto</a></li></ol>
+      </nav>
+      <div class="cards">
+        <section class="card" id="pt-partidas" aria-labelledby="pt-partidas-title">
+          <h2 id="pt-partidas-title">As partidas ficam no dispositivo</h2>
+          <p>Nomes, dardos, pontos, histórico e cópias são guardados localmente e não são enviados aos serviços de análise. Podes exportá-los para Ficheiros ou partilhá-los. O segundo ecrã usa a rede local.</p>
+        </section>
+        <section class="card" id="pt-compra-unica" aria-labelledby="pt-compra-unica-title">
+          <h2 id="pt-compra-unica-title">Compra única</h2>
+          <p>A Apple processa o pagamento. O RevenueCat recebe informações da transação e um identificador pseudónimo de instalação para validar a compra e restaurar o acesso permanente. Não recebemos dados do cartão. Sem conta de jogador nem subscrição.</p>
+        </section>
+        <section class="card" id="pt-analise-e-diagnostico" aria-labelledby="pt-analise-e-diagnostico-title">
+          <h2 id="pt-analise-e-diagnostico-title">Análise e diagnóstico</h2>
+          <p>Opcional e desativado por predefinição. O Dartpop pergunta uma vez; pode mudar de ideias a qualquer momento nas Definições com o interruptor Ajudar a melhorar o Dartpop. Se aceitar, o PostHog (alojado na União Europeia) recebe uma lista fechada de eventos de utilização, contagens agregadas e opções de regras, com um identificador aleatório e sem perfil de pessoa. O Sentry (alojado na União Europeia) recebe relatórios de falhas reconstruídos apenas com informação técnica. Nomes, pontuações, cópias de segurança, capturas de ecrã e gravações de sessão nunca são enviados. A geolocalização do PostHog e o rastreio publicitário estão desativados. Se recusar, nem o PostHog nem o Sentry são iniciados.</p>
+        </section>
+        <section class="card" id="pt-prestadores-e-conservacao" aria-labelledby="pt-prestadores-e-conservacao-title">
+          <h2 id="pt-prestadores-e-conservacao-title">Prestadores e conservação</h2>
+          <p>RevenueCat, PostHog e Sentry tratam dados técnicos segundo as suas políticas e prazos configurados, podendo fazê-lo fora do teu país. Os dados locais ficam até serem removidos do dispositivo. As cópias exportadas ficam sob o teu controlo.</p>
+        </section>
+        <section class="card" id="pt-escolhas-e-direitos" aria-labelledby="pt-escolhas-e-direitos-title">
+          <h2 id="pt-escolhas-e-direitos-title">Escolhas e direitos</h2>
+          <p>Contacta-nos para pedir informações, acesso ou eliminação de dados técnicos sobre ti. Não envies palavras-passe nem dados de pagamento. Eliminar a app remove os ficheiros locais; as cópias exportadas devem ser eliminadas separadamente. O contador de experiência pode permanecer no porta-chaves iOS e não é reposto por uma importação.</p>
+        </section>
+        <section class="card" id="pt-editor-e-contacto" aria-labelledby="pt-editor-e-contacto-title">
+          <h2 id="pt-editor-e-contacto-title">Editor e contacto</h2>
+          <p>O Dartpop é publicado por Abdelhafid Younes. Para questões de privacidade escreve para <a href="mailto:abdelhafid.younes@gmail.com">abdelhafid.younes@gmail.com</a>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Dartpop · Abdelhafid Younes</span>
+    <nav aria-label="Ligações legais">
+      <a href="../">Início</a>
+      <a href="../support/">Apoio</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const store = { get(k){ try { return localStorage.getItem(k) } catch { return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch {} } };
+  const saved = store.get("dartpop-theme"); if (saved) root.dataset.theme = saved;
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark"; store.set("dartpop-theme", root.dataset.theme);
+  });
+  const header = document.querySelector("header.site");
+  addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 8), { passive: true });
+})();
+</script>
+</body>
+</html>
