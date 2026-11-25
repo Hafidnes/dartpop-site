@@ -148,6 +148,19 @@ h2.display{font-size:clamp(52px,7.5vw,104px);margin:14px 0 18px}
 .gcard.feat p{color:#ffe6e8}
 .gcard svg{width:30px;height:30px}
 
+/* Follow: Live Activity and widget */
+.follow{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:56px;align-items:start}
+.follow figcaption{margin-top:18px}
+.follow figcaption b{display:block;font-size:18px}
+.follow figcaption span{color:var(--muted);font-size:15px}
+.lockscreen{background:linear-gradient(160deg,#3b3632,#17130F 70%);border:1px solid var(--line);border-radius:36px;padding:26px 18px 30px;box-shadow:var(--shadow);display:grid;gap:120px;justify-items:center}
+.lockscreen img{width:100%;height:auto;display:block}
+.lockscreen .isl{width:44%}
+.widgetshot{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 30px rgba(40,20,10,.22))}
+.followside{display:grid;gap:34px}
+#suivi .feats{margin:0}
+#suivi .feats svg{color:var(--red)}
+
 /* Night / second screen */
 .night{background:var(--ink);color:var(--bg);border-radius:40px;margin:0 24px;padding:90px 0;overflow:hidden;position:relative}
 .night .sub{color:color-mix(in srgb,var(--bg) 70%,transparent)}
@@ -202,6 +215,7 @@ footer nav{gap:18px}
 @media (max-width:980px){
   .hero-grid,.duo{grid-template-columns:1fr}
   .shots{grid-template-columns:repeat(2,1fr)}
+  .follow{grid-template-columns:1fr}.lockscreen{gap:70px}
   .games{grid-template-columns:1fr 1fr}
   .gcard.feat{grid-column:span 2;grid-row:auto}
   nav{display:none}
@@ -360,6 +374,32 @@ footer nav{gap:18px}
     </div>
   </div>
 </div>
+
+<section id="suivi" aria-labelledby="suivi-title" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="kicker reveal">Neu</div>
+    <h2 class="display reveal" id="suivi-title">Der Score<br>bleibt bei dir.</h2>
+    <p class="sub reveal" id="suivi-sub">iPhone gesperrt oder App geschlossen: Der Abend bleibt im Blick.</p>
+    <div class="follow">
+      <figure class="lockcard reveal" style="margin:0">
+        <div class="lockscreen"><img class="isl" src="../assets/live/de/island.webp" alt="Dynamic Island: die Dartpop-Scheibe und der Score des Spielers, 136" loading="lazy" width="480" height="110"><img src="../assets/live/de/banner.webp" alt="Sperrbildschirm: Dartpop · 301, Roger am Board, 136; Alex 210, Sam 244" loading="lazy" width="1236" height="452"></div>
+        <figcaption><b>Live-Aktivität</b><span>Das laufende Match auf dem Sperrbildschirm und in der Dynamic Island des iPhone.</span><!--live--></figcaption>
+      </figure>
+      <div class="followside">
+        <figure class="reveal" style="margin:0">
+          <img class="widgetshot" src="../assets/live/de/widget.webp" alt="Dartpop-Widget: Durchschnitt der Spieler und Rangliste des letzten Matches" loading="lazy" width="1126" height="524">
+          <figcaption><b>Widget</b><span>Der Durchschnitt deiner Spieler und das letzte Match auf dem Home-Bildschirm.</span><!--widget--></figcaption>
+        </figure>
+        <ul class="feats reveal">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Nach dem Match: Podium, Durchschnitt, beste Aufnahme und geworfene Darts.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Ansage des Scores, wenn du möchtest.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Wöchentliche Trainingserinnerung, an deinem Wunschtag zur Wunschzeit.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Erneut spielen, trainieren oder ein Match vorbereiten: über das App-Symbol, Kurzbefehle oder Siri.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section aria-labelledby="promesses-title">
   <div class="wrap">
