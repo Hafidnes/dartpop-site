@@ -25,12 +25,12 @@ MENU = [("fr", "Français", "privacy/"), ("en", "English", "privacy/#en"), ("de"
 T = {}
 
 T["de"] = dict(
-    html_lang="de", h1="Datenschutz", updated="Aktualisiert: 16. November 2026",
+    html_lang="de", h1="Datenschutz", updated="Aktualisiert: 25. November 2026",
     home_label="Dartpop, Startseite", theme_label="Zwischen hellem und dunklem Design wechseln", download="Laden",
     home="Startseite", support="Support", toc="Inhalt", links_label="Rechtliche Links",
     sections=[
         ("spiele", "Deine Spiele bleiben auf deinem Gerät",
-         "Spielernamen, Würfe, Punkte, Verlauf und Sicherungen werden lokal gespeichert und nicht an unsere Analysedienste gesendet. Du kannst sie in Dateien exportieren oder selbst teilen. Die zweite Punkteanzeige nutzt das lokale Netzwerk."),
+         "Spielernamen, Würfe, Punkte, Verlauf und Sicherungen werden lokal gespeichert und nicht an unsere Analysedienste gesendet. Du kannst sie in Dateien exportieren oder selbst teilen. Die zweite Punkteanzeige nutzt das lokale Netzwerk. Die optionale Trainingserinnerung ist standardmäßig deaktiviert und eine auf deinem Gerät geplante Mitteilung; dabei wird nichts gesendet. Auch das Widget, die Live-Aktivität und die Ansage des Scores arbeiten auf dem Gerät."),
         ("einmaliger-kauf", "Einmaliger Kauf",
          "Apple verarbeitet die Zahlung. RevenueCat erhält Transaktionsinformationen und eine pseudonyme Installationskennung, um Käufe zu prüfen und den dauerhaften Zugang wiederherzustellen. Wir erhalten keine Kartendaten. Kein Spielerkonto oder Abo erforderlich."),
         ("analyse-und-diagnose", "Analyse und Diagnose",
@@ -44,12 +44,12 @@ T["de"] = dict(
     ])
 
 T["es"] = dict(
-    html_lang="es", h1="Privacidad", updated="Actualizado: 16 de noviembre de 2026",
+    html_lang="es", h1="Privacidad", updated="Actualizado: 25 de noviembre de 2026",
     home_label="Dartpop, inicio", theme_label="Cambiar entre tema claro y oscuro", download="Descargar",
     home="Inicio", support="Ayuda", toc="Contenido", links_label="Enlaces legales",
     sections=[
         ("partidas", "Tus partidas se quedan en el dispositivo",
-         "Los nombres, dardos, puntos, historial y copias se guardan localmente y no se envían a nuestros servicios de análisis. Puedes exportarlos a Archivos o compartirlos por tu cuenta. La segunda pantalla usa la red local."),
+         "Los nombres, dardos, puntos, historial y copias se guardan localmente y no se envían a nuestros servicios de análisis. Puedes exportarlos a Archivos o compartirlos por tu cuenta. La segunda pantalla usa la red local. El recordatorio de entrenamiento, opcional y desactivado por defecto, es una notificación programada en tu dispositivo; no se envía nada. El widget, la actividad en directo y el anuncio de voz del marcador también funcionan en el dispositivo."),
         ("compra-unica", "Compra única",
          "Apple procesa el pago. RevenueCat recibe datos de la transacción y un identificador seudónimo de instalación para validar la compra y restaurar el acceso permanente. No recibimos datos de tarjeta. Sin cuenta de jugador ni suscripción."),
         ("analisis-y-diagnostico", "Análisis y diagnóstico",
@@ -63,12 +63,12 @@ T["es"] = dict(
     ])
 
 T["it"] = dict(
-    html_lang="it", h1="Privacy", updated="Aggiornato: 16 novembre 2026",
+    html_lang="it", h1="Privacy", updated="Aggiornato: 25 novembre 2026",
     home_label="Dartpop, home", theme_label="Alterna tra tema chiaro e scuro", download="Scarica",
     home="Home", support="Assistenza", toc="Sommario", links_label="Link legali",
     sections=[
         ("partite", "Le partite restano sul dispositivo",
-         "Nomi, freccette, punteggi, cronologia e backup sono salvati localmente e non vengono inviati ai nostri servizi di analisi. Puoi esportarli in File o condividerli. Il secondo schermo usa la rete locale."),
+         "Nomi, freccette, punteggi, cronologia e backup sono salvati localmente e non vengono inviati ai nostri servizi di analisi. Puoi esportarli in File o condividerli. Il secondo schermo usa la rete locale. Il promemoria per l’allenamento, facoltativo e disattivato per impostazione predefinita, è una notifica programmata sul dispositivo; non viene inviato nulla. Anche il widget, l’attività in tempo reale e l’annuncio vocale del punteggio funzionano sul dispositivo."),
         ("acquisto-unico", "Acquisto unico",
          "Apple gestisce il pagamento. RevenueCat riceve informazioni sulla transazione e un identificatore pseudonimo di installazione per verificare l’acquisto e ripristinare l’accesso permanente. Non riceviamo i dati della carta. Nessun account giocatore o abbonamento."),
         ("analisi-e-diagnostica", "Analisi e diagnostica",
@@ -82,12 +82,12 @@ T["it"] = dict(
     ])
 
 T["pt"] = dict(
-    html_lang="pt-PT", h1="Privacidade", updated="Atualizado: 16 de novembro de 2026",
+    html_lang="pt-PT", h1="Privacidade", updated="Atualizado: 25 de novembro de 2026",
     home_label="Dartpop, início", theme_label="Alternar entre tema claro e escuro", download="Descarregar",
     home="Início", support="Apoio", toc="Índice", links_label="Ligações legais",
     sections=[
         ("partidas", "As partidas ficam no dispositivo",
-         "Nomes, dardos, pontos, histórico e cópias são guardados localmente e não são enviados aos serviços de análise. Podes exportá-los para Ficheiros ou partilhá-los. O segundo ecrã usa a rede local."),
+         "Nomes, dardos, pontos, histórico e cópias são guardados localmente e não são enviados aos serviços de análise. Podes exportá-los para Ficheiros ou partilhá-los. O segundo ecrã usa a rede local. O lembrete de treino, opcional e desativado por predefinição, é uma notificação agendada no dispositivo; nada é enviado. O widget, a atividade em direto e o anúncio de voz da pontuação também funcionam no dispositivo."),
         ("compra-unica", "Compra única",
          "A Apple processa o pagamento. O RevenueCat recebe informações da transação e um identificador pseudónimo de instalação para validar a compra e restaurar o acesso permanente. Não recebemos dados do cartão. Sem conta de jogador nem subscrição."),
         ("analise-e-diagnostico", "Análise e diagnóstico",
